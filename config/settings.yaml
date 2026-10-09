@@ -1,0 +1,42 @@
+# geo_distance_arena configuration.
+# Cities, modes, speed assumptions, Nominatim user-agent, and seeds.
+# Network access (Overpass graph download, Nominatim geocoding) happens only in the
+# one-time `make graph` / `make geocode` steps; everything else runs offline on caches.
+
+seed: 42
+
+geocode:
+  # Nominatim fair-use requires a descriptive user agent with a real contact.
+  # Fill in a contact you control before running `make geocode`.
+  user_agent: "geo_distance_arena/0.1 (set a contact email here)"
+  min_delay_seconds: 1.1
+  cache_dir: "data/geocoded"
+
+graph:
+  cache_dir: "data/graphs"
+  # A bounded area chosen to contain natural barriers: central Copenhagen is split by the
+  # Inner Harbour, which separates the city centre from Christianshavn and Amager and is
+  # crossed by only a handful of road bridges, so the harbour dominates travel and the
+  # detour factor explodes across the water. A center point + radius keeps the graph small
+  # (graph_from_place on the whole city would be enormous and slow).
+  cities:
+    - name: "copenhagen"
+      center_lat: 55.6761
+      center_lon: 12.5850
+      dist_m: 2600
+  network_types: ["drive", "walk", "bike"]
+
+# Free travel-time comes from weighting edges by speed limit. These fill in where
+# OSM has no maxspeed tag, keyed by the OSM highway class (km/h).
+speeds:
+  default_kph: 50.0
+  by_highway:
+    motorway: 100.0
+    trunk: 80.0
+    primary: 65.0
+    secondary: 55.0
+    tertiary: 45.0
+    unclassified: 40.0
+    residential: 30.0
+    living_street: 15.0
+    service: 20.0

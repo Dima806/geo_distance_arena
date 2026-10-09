@@ -1,0 +1,10 @@
+{
+  "customers_inside_circle": 32,
+  "customers_inside_drive_time": 57,
+  "detour_factor_max": 3.373983911895483,
+  "detour_factor_mean": 1.3671219100864807,
+  "detour_factor_p90": 1.6123412542599276,
+  "hybrid_agreement_rate": 1.0,
+  "hybrid_speedup": 8.0,
+  "nearest_branch_flip_rate": 0.10833333333333334
+}

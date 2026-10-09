@@ -218,3 +218,16 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+.llm/
+.agents/
+agent/
+.claude/skills/
+
+# Cache JSONs (regenerated, not committed)
+# OSMnx HTTP response cache from Overpass downloads.
+cache/
+# Geocode results and generated scenario points (rebuilt by `make geocode` / the scenario
+# generator from the committed GraphML). Notebook result JSONs under outputs/data/ are
+# deliverables and stay tracked.
+data/geocoded/*.json

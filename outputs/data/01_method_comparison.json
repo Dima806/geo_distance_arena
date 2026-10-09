@@ -1,0 +1,37 @@
+[
+  {
+    "geodesic_m": 129724.92818905499,
+    "haversine_m": 129612.95055540682,
+    "manhattan_m": 182912.17437057378,
+    "pair": "NYC -> Philadelphia",
+    "projected_m": 129676.26549834479
+  },
+  {
+    "geodesic_m": 343923.1200909892,
+    "haversine_m": 343556.5348808832,
+    "manhattan_m": 468706.31370313704,
+    "pair": "London -> Paris",
+    "projected_m": 343869.5779831936
+  },
+  {
+    "geodesic_m": 3944422.231489921,
+    "haversine_m": 3935751.6908939853,
+    "manhattan_m": 4786939.55193148,
+    "pair": "LA -> NYC",
+    "projected_m": 4005455.673721045
+  },
+  {
+    "geodesic_m": 393181.8860676794,
+    "haversine_m": 392441.7720145063,
+    "manhattan_m": 493790.1053625081,
+    "pair": "Tokyo -> Osaka",
+    "projected_m": 393345.45146500476
+  },
+  {
+    "geodesic_m": 834.4280523023389,
+    "haversine_m": 832.6581055663313,
+    "manhattan_m": 1169.294473167567,
+    "pair": "Copenhagen cross-harbour",
+    "projected_m": 834.3294973009469
+  }
+]

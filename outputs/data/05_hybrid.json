@@ -1,0 +1,8 @@
+{
+  "agreement_rate": 1.0,
+  "k": 5,
+  "n_customers": 120,
+  "n_stores": 40,
+  "road_calls_full": 4800,
+  "road_calls_hybrid": 600
+}
